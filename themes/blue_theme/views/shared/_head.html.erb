@@ -1,0 +1,21 @@
+<% theme ||= false -%>
+<head>
+  <title><%= browser_title(yield(:title)) %></title>
+  <link rel="shortcut icon" href="/favicon.ico" />
+	<meta name="author" content="重庆益家家政" /> 
+	<meta name="copyright" content="重庆益家家政服务中心" /> 
+	<meta name="keywords" content="重庆益家家政,月嫂,育儿嫂,早教,保姆" /> 
+	<meta name="description" content="重庆益家家政服务公司是业界第一家为会员提供试用期免费服务的家政公司，提供重庆保姆,重庆家政,重庆家政公司,重庆家政服务,重庆清洁,重庆南坪清洁服务/重庆保姆,重庆住家保姆,重庆保姆公司,重庆保姆价格,重庆保姆中介" /> 
+  <meta charset='<%= Refinery::Application.config.encoding %>' />
+  <%= csrf_meta_tag %>
+  <%= render(:partial => '/shared/html5_for_ie.js').html_safe if request.env['HTTP_USER_AGENT'] =~ /MSIE/ %>
+  <%= render :partial => 'shared/google_analytics' unless local_request? %>
+  <%= stylesheet_link_tag "application", "formatting", :theme => theme %>
+  <%= stylesheet_link_tag "theme" %>
+  <%= stylesheet_link_tag "home", :theme => theme if home_page? %>
+  <%= "<!--[if IE]>#{stylesheet_link_tag 'ie6', 'ie7', :theme => theme}<![endif]-->".html_safe if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+  <%= "<meta name=\"keywords\" content=\"#{@meta.meta_keywords}\" />".html_safe if @meta.meta_keywords.present? %>
+  <%= "<meta name=\"description\" content=\"#{@meta.meta_description}\" />".html_safe if @meta.meta_description.present? -%>
+  <%= yield :head_libraries %>
+  <%= yield :head %>
+</head>

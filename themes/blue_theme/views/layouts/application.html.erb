@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <%= render :partial => "/shared/head", :locals => {:theme => true} %>
+  <body  background="/theme/images/bg.jpg">
+    <%= render :partial => "/shared/site_bar" %>
+    <div id='page_container'>
+      <div id='page'>
+        <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+        <div id='header'>
+          <%= render :partial => "/shared/header" %>
+        </div>
+        <div id='body' class='clearfix'>
+				  <!--slider-->
+					 <% if home_page? -%>
+							<div id="slider1">
+							<div class="viewport">
+								<ul class="overview">								
+									<li><img src="/theme/images/banner2.png" /></li>
+									<li><img src="/theme/images/banner1.png" /></li>
+									<li><img src="/theme/images/banner0.png" /></li>
+								</ul>
+							</div>
+						</div>
+					<%else -%>
+					  <div id='banner'><%=image_tag "/theme/images/banner#{((rand()*10).to_i)%3}.png" %></div>
+					<%end -%>
+          <%= yield %>
+        </div>
+        <div id='footer'>
+          <%= render :partial => "/shared/footer" %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

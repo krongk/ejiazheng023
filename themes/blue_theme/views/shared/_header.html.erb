@@ -1,0 +1,35 @@
+<div id='header_content'>
+	 <table width="970" align="center" border="0" cellpadding="0" cellspacing="0" height="81">
+		<tbody><tr>
+			<td valign="bottom" width="160" height="7"></td>
+			<td valign="bottom" width="810" height="7"></td>
+		</tr>
+		<tr> 
+			<td valign="bottom" width="160"><a href="<%=root_url(:only_path => true)%>"><img src="/theme/images/logo.jpg" alt="重庆益家家政服务中心" height="74" border="0"></a></td>
+			<td valign="bottom" width="810"> 
+			 <div align="right"><span class="big-phone">023-65305533</span></div>
+				<div align="right"> 
+					<table width="95%" border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr> 
+							<td> 
+								<div align="right">
+								<a href="http://www.yijia023.com"><img src="theme/images/top_1_home.jpg" border="0" height="22"></a>
+								<a href="http://www.yijia023.com/contact"><img src="theme/images/top_3_contact.jpg"  border="0" height="22"></a>
+								<a href="http://www.yijia023.com/sitemap"><img src="theme/images/top_4_sitemap.jpg" border="0" height="22"></a></div>
+							</td>
+						</tr>
+						<tr> 
+							<td height="7"></td>
+						</tr>
+					</tbody></table>
+				</div>
+			</td>
+		</tr>
+	 </tbody>
+  </table>
+  <%= render :partial => "/shared/menu",
+             :locals => {
+               :dom_id => 'menu',
+               :css => 'menu'
+             } -%>
+</div>

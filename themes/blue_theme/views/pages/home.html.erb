@@ -1,0 +1,40 @@
+<%# For the best way to modify this page with your own markup read %>
+<%# http://github.com/resolve/refinerycms-theming/blob/master/readme.md %>
+
+<%= render :partial => "/shared/content_page" %>
+
+<%#add slider %>
+<% content_for :head_libraries do -%>
+  <script type="text/javascript" src="/theme/javascripts/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="/theme/javascripts/jquery.tinycarousel.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//$('#slider1').tinycarousel();	
+			$('#slider1').tinycarousel({ pager: true, interval: true  });
+			//$('#slider1').tinycarousel({ display: 2 });
+		});
+	</script>	
+<% end -%>
+
+<% content_for :body_content_right do -%>
+<% @news_items = NewsItem.latest -%>
+	<div align="center">
+		<table width="225" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td><a href="http://www.cimcmodularsolutions.com/news.php"><img src="/theme/images/right_title.jpg" width="220" border="0"></a></td>
+			</tr>
+		</tbody></table>
+		<br>
+		<table width="225" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td class="news">
+				<% @news_items.each do |item| %>
+					<p><b><font color="#134961"><%= l(item.publish_date, :format => :long) %></font></b><br>
+					 <%= link_to item.title, news_item_url(item) %>
+					</p> 
+				<% end %>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+<% end -%>
