@@ -1,8 +1,6 @@
 <%# For the best way to modify this page with your own markup read %>
 <%# http://github.com/resolve/refinerycms-theming/blob/master/readme.md %>
 
-<%= render :partial => "/shared/content_page" %>
-
 <%#add slider %>
 <% content_for :head_libraries do -%>
   <script type="text/javascript" src="/theme/javascripts/jquery-1.4.2.min.js"></script>
@@ -21,10 +19,9 @@
 	<div align="center">
 		<table width="225" border="0" cellpadding="0" cellspacing="0">
 			<tbody><tr>
-				<td><a href="http://www.cimcmodularsolutions.com/news.php"><img src="/theme/images/right_title.jpg" width="220" border="0"></a></td>
+				<td><a href="#"><img src="/theme/images/right_title.jpg" width="220" border="0"></a></td>
 			</tr>
 		</tbody></table>
-		<br>
 		<table width="225" border="0" cellpadding="0" cellspacing="0">
 			<tbody><tr>
 				<td class="news">
@@ -38,3 +35,5 @@
 		</tbody></table>
 	</div>
 <% end -%>
+
+<%= render :partial => "/shared/content_page" %>

@@ -3,10 +3,6 @@
     Override default refinery application CSS below.
     Formatting applies to all frontend.
 */
-#page_container {
-	background-image: url("theme/images/bg.jpg");
-	background-repeat: repeat-x;
-}
 #page {
 	margin-top: 0px;
 	margin-right: auto;
@@ -35,7 +31,7 @@
 	background-color: #036;
 	float: left;
 	width: 970px;
-	height: 40px;
+	height: 45px;
 	background-image: url(theme/images/bg_menu.jpg);
 	background-repeat: repeat-x;
 }
@@ -55,7 +51,7 @@
 	list-style-type: none;
 }
 #menu ul li a {
-	padding: 12px;
+	padding: 13px 12px;
 	margin: 0px;
 	color: #FFF;
 	font-weight: bold;
@@ -78,16 +74,6 @@
 	float: left;
 	height: 120px;
 	width: 970px;
-}
-#menu ul li ul {
-	float: left;
-	position: absolute;
-	width: 120px;
-	visibility: visible;
-	height: -900px;
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
 }
 /*---------------*/
 body{margin:0px; padding:0px;}
@@ -169,7 +155,7 @@ H2{
 	border-bottom-color: #1072dc;
 }
 /* Tiny Carousel */
-#slider1 { height: 1%; overflow:hidden; padding: 0 0 10px; z-index:1;   }
+#slider1 { height: 1%; overflow:hidden; padding: 0 0 10px; z-index:1;  }
 #slider1 .viewport { float: left; width: 970px; height: 175px; overflow: hidden; position: relative; }
 #slider1 .buttons { background:url("/theme/images/buttons.png") no-repeat scroll 0 0 transparent; display: block; margin: 30px 10px 0 0; background-position: 0 -38px; text-indent: -999em; float: left; width: 39px; height: 37px; overflow: hidden; position: relative; }
 #slider1 .next { background-position: 0 0; margin: 30px 0 0 10px;  }
