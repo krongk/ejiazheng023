@@ -72,3 +72,9 @@ zh-CN:
   activerecord:
     models:
       inquiry: '表单'
+    attributes:
+      inquiry:
+        name: "您贵姓"
+        email: "电子邮箱"
+        phone: "联系方式"
+        message: "预约信息"
